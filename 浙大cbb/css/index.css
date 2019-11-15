@@ -1,0 +1,434 @@
+	*{
+				margin: 0px;
+				padding: 0px;
+			}
+			.navigation{
+				width: 1280px;
+				margin: 0px auto;
+			}
+			.hsederone{
+				border: 1px solid red;
+				width: 250px;
+				height: 28px;
+			}
+			.banner h1{
+				display: inline-block;
+				margin-left: 160px;
+				padding-top: 40px;
+				font-family: MicrosoftYaHei-Bold;
+				font-size: 38px;
+				color: #2566C2;
+			}
+			.banner input{
+				position: absolute;
+				width: 190px;
+				height: 24px;
+				margin-top: 55px;
+				margin-left: 100px;
+				color: #A9A9A9;
+				border: 1px solid #A9A9A9;
+				border-radius: 5px;
+				border-right: 60px solid #2566C2;
+			}
+			.banner a{
+				position: absolute;
+				display: block;
+				width: 60px;
+				height: 28px;
+				text-decoration: none;
+				margin-left: 1185px;
+				margin-top: -34px;
+				color: #ffffff;
+			}
+			.banner {
+				position: relative;
+				background: url(../img/清晰%202.png) no-repeat 84px 21px;
+				width: 100%;
+				height: 120px;
+				background-color: #F4F6F9;
+			}
+			nav ul{
+				list-style: none;
+				background: #2566C2;
+				overflow: hidden;
+				padding-left: 96px;
+			}
+			nav ul li{
+				text-align: center;
+				float: left;
+				width: 134px;
+			}
+			nav ul li a{
+				text-decoration: none;
+				font-family: MicrosoftYaHei;
+				font-size: 20px;
+				color: #FFFFFF;
+				display: block;
+				padding: 13px 0px;
+			}
+			section{
+				background-color: #F4F6F9;
+				width: 620px;
+				padding-left: 40px;
+				padding-top: 20px;
+				padding-right: 20px;
+				float: left;
+			}
+			.leftone,.lefttwo{
+				background-color: #FFFFFF;
+				margin-top: 20px;
+			}
+			.leftone p,.lefttwo p{
+				display: inline-block;
+				font-family: MicrosoftYaHei;
+				font-size: 20px;
+				color: #2566C2;
+				text-align: left;
+				background: url(../img/矩形.png) no-repeat 10px 15px;
+				border-bottom: 2px solid #2566C2;
+				padding: 10px 0px 10px 27px;
+			}
+			
+			.lefttwo a,.leftone a{
+				text-decoration: none;
+				font-family: MicrosoftYaHei;
+				font-size: 14px;
+				color: #4B8DE3;
+				margin-left: 450px;
+			}
+			.leftone ul ,.lefttwo ul{
+				list-style: none;
+				font-family: MicrosoftYaHei;
+				font-size: 14px;
+				color: #333333;
+				padding: 20px 0px 20px 0px;
+			}
+			.leftone ul li{
+				display: inline-block;
+				width: 466px;
+				background: url(../img/椭圆形%202.png) no-repeat 10px 12px;
+				padding: 7.5px 0px 5px 30px;
+			}
+			.leftone span{
+				margin-left: 30px;
+				font-family: MicrosoftYaHei;
+				font-size: 14px;
+				color: #999999;
+			}
+			.leftlinks li{
+				display: inline-block;
+				width: 246px;
+				
+				margin-left: 220px;
+				font-family: MicrosoftYaHei;
+				font-size: 14px;
+				color: #333333;
+				padding: 5px 0px 5px 20px;
+				background: url(../img/椭圆形%202.png) no-repeat 5px 10px;
+			}
+			.lefttwo span{
+				font-family: MicrosoftYaHei;
+				font-size: 14px;
+				color: #999999;
+				margin-left: 30px;
+			}
+			.lefttwo{
+				background: url(../img/2_11.png) no-repeat 20px 66px;
+				background-size: 200px 184px;
+				background-color: #ffffff;
+			}
+			aside{
+				width: 600px;
+				float: left;
+				overflow: hidden;
+				margin:0px 0px 0px 0px;
+				background-color: #F4F6F9;
+			}
+			aside p{
+				display: inline-block;
+				font-family: MicrosoftYaHei;
+				font-size: 20px;
+				color: #2566C2;
+				text-align: left;
+				background: url(../img/矩形.png) no-repeat 10px 15px;
+				border-bottom: none;
+				padding: 10px 0px 10px 27px;
+			}
+			aside a{
+				font-family: MicrosoftYaHei;
+				font-size: 14px;
+				color: #4B8DE3;
+				margin-left: 380px;
+				text-decoration: none;
+			}
+			.right{
+				position: relative;
+				width: 530px;
+				height: 566px;
+				background: url(../img/0033_02.png) no-repeat;
+				background-size: 560px 566px;
+			}
+			.content{
+				margin-top: 20px;
+				margin-right: 40px;
+				background-color: #FFFFFF;
+			}
+			.content li{
+				font-family: MicrosoftYaHei;
+				font-size: 14px;
+				color: #333333;
+			}
+			
+			.rightone,.righttwo{
+				background-color: #ffffff;
+				margin-top: 20px;
+				margin-right: 40px;
+				
+			}
+			.leftone ul li:hover{
+				text-decoration: underline;
+				color: #999999;
+			}
+			.lefttwo ul li:hover{
+				text-decoration: underline;
+				color: #999999;
+			}
+			.rightone ul li:hover{
+				text-decoration: underline;
+				color: #999999;
+			}
+			.righttwo ul li:hover{
+				text-decoration: underline;
+				color: #999999;
+			}
+			.rightone ul ,.righttwo ul{
+				list-style: none;
+				font-family: MicrosoftYaHei;
+				font-size: 14px;
+				color: #333333;
+				padding: 20px 0px 20px 0px;
+			}
+			.rightone ul li{
+				display: inline-block;
+				width: 412px;
+				background: url(../img/椭圆形%202.png) no-repeat 10px 12px;
+				padding: 7.5px 0px 5px 30px;
+			}
+			.righttwo ul li{
+				display: inline-block;
+				width: 412px;
+				background: url(../img/椭圆形%202.png) no-repeat 10px 10px;
+				padding:4.5px 0px 5px 30px;
+			}
+			.rightone p,.righttwo p{
+				display: inline-block;
+				font-family: MicrosoftYaHei;
+				font-size: 20px;
+				color: #2566C2;
+				text-align: left;
+				background: url(../img/矩形.png) no-repeat 10px 15px;
+				border-bottom: 2px solid #2566C2;
+				padding: 10px 0px 10px 27px;
+			}
+			.rightone span,.righttwo span{
+				margin-left: 30px;
+				font-family: MicrosoftYaHei;
+				font-size: 14px;
+				color: #999999;
+			}
+			footer{
+				clear: both;
+				
+			}
+			footer a{
+				text-decoration: none;
+			}
+			.tf1{
+				background: #F4F6F9;
+				font-family: MicrosoftYaHei;
+				font-size: 16px;
+				padding: 20px 0px 20px 200px;
+				border-bottom: 2px solid #2566C2;
+			}
+			.tf1 a{
+				margin-left: 30px;
+				font-family: MicrosoftYaHei;
+				font-size: 16px;
+				color: #4B8DE3;
+				text-decoration: none;
+			}
+			.tf1 a:hover{
+				text-decoration: underline;
+				color: grey;
+			}
+			.tf2{
+				margin: 40px 0px;
+				text-align: center;
+				font-family: MicrosoftYaHei;
+				font-size: 12px;
+				background: url(../img/党政机关%202.png)  no-repeat 340px 18px;
+			}
+			.tf2 a{
+				text-decoration: none;
+				font-family: MicrosoftYaHei;
+				font-size: 16px;
+				color: #4B8DE3;
+			}
+			.tf2 p{
+				font-family: MicrosoftYaHei;
+				font-size: 12px;
+				color: #666666;
+			}
+			@keyframes love{
+				0%{
+					
+				}
+				70%{
+					width: 40px;
+					height: 40px;
+					opacity: 1;
+				}
+				100%{
+					width: 70px;
+					height: 70px;
+					opacity: 0;
+				}
+			}
+			.cicty{
+				position: absolute;
+				top: 228px;
+				left: 412px;
+			}
+			.onee{
+				width: 8px;
+				height: 8px;
+				border: 1px solid #0000FF;
+				border-radius: 8px;
+				background: #0000FF;
+			}
+			.cicty div[class^="twoo"] {
+				width: 8px;
+				height: 8px;
+				position: absolute;
+				top: 50%;
+				left: 50%;
+				transform: translate(-50%,-50%);
+				box-shadow: 0 0 8px #009dfd;
+				border-radius: 50%;
+				/* animation-name: love;
+				animation-duration: 0.5s; */
+				animation: love 1.2s linear infinite ;
+			}
+			 #twoo1{
+				animation-delay: 0.4s;
+			}
+			 #twoo2{
+				animation-delay: 0.8s;
+			}
+			.cicty1{
+				position: absolute;
+				top: 90px;
+				left: 490px;
+			}
+			.onee1{
+				width: 8px;
+				height: 8px;
+				border: 1px solid #0000FF;
+				border-radius: 8px;
+				background: #0000FF;
+			}
+			.cicty1 div[class^="twoo"] {
+				width: 8px;
+				height: 8px;
+				position: absolute;
+				top: 50%;
+				left: 50%;
+				transform: translate(-50%,-50%);
+				box-shadow: 0 0 8px #009dfd;
+				border-radius: 50%;
+				/* animation-name: love;
+				animation-duration: 0.5s; */
+				animation: love 1.2s linear infinite ;
+			}
+			 #twoo11{
+				animation-delay: 0.4s;
+			}
+			 #twoo21{
+				animation-delay: 0.8s;
+			}
+			.heb{
+				position: absolute;
+				width: 50px;
+				top: 85px;
+				left: 450px;
+				font-size: 6px;
+			}
+			.langke{
+				position: absolute;
+				width: 50px;
+				top: 305px;
+				left: 220px;
+				font-size: 6px;
+			}
+			.cicty2{
+				position: absolute;
+				top: 309px;
+				left: 248px;
+			}
+			.onee2{
+				width: 8px;
+				height: 8px;
+				border: 1px solid #0000FF;
+				border-radius: 8px;
+				background: #0000FF;
+			}
+			.cicty2 div[class^="twoo"] {
+				width: 8px;
+				height: 8px;
+				position: absolute;
+				top: 50%;
+				left: 50%;
+				transform: translate(-50%,-50%);
+				box-shadow: 0 0 8px #009dfd;
+				border-radius: 50%;
+				/* animation-name: love;
+				animation-duration: 0.5s; */
+				animation: love 1.2s linear infinite ;
+				}
+				img{
+					vertical-align: top;
+				}
+				.one{
+					width: 620px;
+					height: 342px;
+					position: relative;
+				}
+				.lunbo{
+					width: 620px;
+					height: 342px;
+					overflow: hidden;
+					position: absolute;
+					top: 229px;
+					margin-left: 352px;
+				
+				
+					
+				}
+				.lunbo ul{
+					list-style: none;
+					width: 600%;
+				}
+				.lunbo ul li{
+					float: left;
+				}
+				.lunbo img{
+					width: 620px;
+					height: 342px;
+				}
+				.loding a{
+					text-decoration: none;
+					color: #333333;
+					margin-left: 40px;
+				}
+				
+				

@@ -1,0 +1,82 @@
+*{
+							margin: 0px;
+							padding: 0px;
+						}
+						.content{
+							width: 1280px;
+							height: 768px;
+							margin: 0px auto;
+							background-color: #2566C2;
+						}
+						h1{
+							color: #ffffff;
+						}
+						header{
+							padding: 40px 0px 0px 159px;
+							background: url(img/清晰%202.png) no-repeat 85px 26px;
+						}
+						footer{
+							
+							width: 422px;
+							height: 358px;
+							background: #FFFFFF;
+							border-radius: 6px;
+							margin-left: 429px;
+							margin-top: 100px;
+						}
+						footer .there{
+							text-align: center;
+							font-family: MicrosoftYaHei;
+							font-size: 32px;
+							color: #333333;
+							padding-top: 26px;
+						}
+						.one,.two{
+							border: 1px solid #666666;
+							width: 330px;
+							height: 40px;
+							border-radius: 4px;
+						}
+						.four{
+							border: 1px solid #666666;
+							width: 330px;
+							height: 40px;
+							border-radius: 4px;
+							margin-bottom: 20px;
+							margin-left: 46px;
+						}
+						.one{
+							margin: 30px 0px 20px 46px;
+						}
+						.two{
+						margin-bottom: 20px;
+						margin-left: 46px;
+						}
+						footer input{
+							margin: 10px 0px 0px 16px;
+							border: none;
+							outline: none;
+						}
+						#btn{
+							width: 330px;
+							height: 40px;
+							background: transparent;
+							border: none;
+							border: 1px solid #4B8DE3;
+							border-radius: 4px;
+							font-family: MicrosoftYaHei;
+							font-size: 16px;
+							color: #FFFFFF;
+							background: #4B8DE3;
+							margin-left: 46px;
+						}
+						.loding{
+							position: fixed;
+							top: 0;
+							bottom: 0;
+							left: 0;
+							right: 0;
+							opacity: 0.3;
+							background: #ffffff;
+							display: none;
+						}

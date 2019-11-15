@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<link rel="stylesheet" type="text/css" href="css/denglu.css"/>
+		<script src="js/jquery-1.11.1.min.js"  type="text/javascript" charset="utf-8"></script>
+		<script type="text/javascript">
+			$(function() {
+				
+				$("#btn").click(function(e) {
+					// alert($("#pwd").val());
+				if($("#userName").val() == "" || $("#pwd").val() == "" ) {
+					return false;
+				} 
+						$.ajax({
+							url:"check.php",
+							type:"POST",
+							data:{userName:$("#userName").val(),pwd:$("#pwd").val()},
+							dataType:"json",
+							success:function(data) {
+								if(data.status =="1001") {
+									 location.href = "login.html";
+								} else {
+									alert("用户名或密码错误");
+								}
+							}
+						})
+					
+				});
+				$("#userName").focus(function() {
+					$(this).val("");
+				})
+				$("#pwd").focus(function() {
+					$(this).val("");
+				})
+				
+			})
+		</script>
+	</head>
+	<body>
+		<div class="navigation">
+			<div class="logo">
+				浙江税务局大企业税收服务和管理信息平台
+			</div>
+			<div class="content">
+				<div class="contents">
+					<p class="denglu">用户登录</p>
+					<p class="one">用户名：<input autocomplete="off" type="text" name="" id="userName" value="" placeholder="请输入用户名" /></p><br>
+					<p class="two">密&nbsp;&nbsp;&nbsp;码：<input type="password" id="pwd" placeholder="请输入密码"/></p><br>
+					<p class="there"><input type="checkbox" name="" id="bos2" value="" /><span>记住密码</span><a href="wangji.html">重置用户?</a></p>
+					<input type="button" name="" id="btn" value="登录" />
+				</div>
+			</div>
+		</div>
+	</body>
+	<script>
+		var btn=document.getElementById("btn");
+	       btn.onclick=function()
+		   {
+			   location.href="login.html";
+		   }
+	</script>
+	<!-- <script type="text/javascript">
+	
+				var userName = document.getElementById("userName");
+				var bos = document.getElementById("bos");
+				var pwd = document.getElementById("pwd");
+				var bos2 =document.getElementById("bos2");
+				var clear =document.getElementById("clear");
+				var bun2 = document.querySelector(".bun2");
+						if(localStorage.getItem("userName")) {
+					userName.value = localStorage.getItem("userName");
+					bos.checked = true;
+				}
+				if(localStorage.getItem("pwd")) {
+					pwd.value = localStorage.getItem("pwd");
+					bos2.checked = true;
+				}
+				bos2.addEventListener("change",function() {
+					if(this.checked) {
+						localStorage.setItem("userName",userName.value);
+						localStorage.setItem("pwd",pwd.value);
+					} else{
+						localStorage.removeItem("userName");
+						localStorage.removeItem("pwd");
+					}
+				})
+				clear.addEventListener("click",function() {
+					localStorage.clear();
+				});
+				var flag = true;
+				bun2.addEventListener("click",function() {
+					if(flag == true){
+						pwd.type = "text";
+						flag = false;
+					} else {
+						pwd.type = "password";
+						flag = true;
+					}
+				});
+				var flag = true;
+				if(flag = true && pwd.value != null) {
+					bos2.addEventListener("click",function() {
+						setInterval(countDown,1000);
+							var inputTime = +new Date() + 10 * 24 * 3600 * 1000; 
+							function countDown(){
+								var nowTime = +new Date();
+								var times = (inputTime - nowTime) / 1000;
+								console.log(times);
+							if( times < 0) {
+								
+								localStorage.clear();
+								
+							}
+						}
+						countDown();
+					});
+					flag = false;
+				} else {
+					clearInterval(countDown);
+					clearInterval(countDown);
+					flag = true;
+				}	
+	</script> -->
+</html>

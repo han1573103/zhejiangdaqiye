@@ -1,0 +1,843 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<meta http-equiv="X-UA-Compatible" content="ie=edge">
+		<title>大事件</title>
+		<link rel="stylesheet" type="text/css" href="css/zxf_page.css" />
+		<script src="js/jquery-1.11.1.min.js"></script>
+		<script type="text/javascript" src="js/zxf_page.js"> </script>
+		<script src="time.js" type="text/javascript" charset="utf-8"></script>
+		<link rel="stylesheet" href="public.css">
+		<script>
+			$(function()
+			{
+				$(".a3").click(function(){
+					
+					$(".hid").toggle();
+					
+				})
+				$(".a4").click(function(){
+				
+					$(".hid1").toggle();
+					
+				})
+				$(".a5").click(function(){
+					
+					$(".hid2").toggle();
+					
+				})
+				$(".hid li:eq(3)").click(function()
+				{
+					
+					$(".right1").show();
+					$(".right").hide();
+					$(".fenju").hide();
+					
+				})
+				$(".hid li:eq(2)").click(function()
+				{
+					
+					$(".right").hide();
+					$(".right1").hide();
+					$(".fenju").css("display","block");
+					
+				})
+				$(".a1").click(function()
+				{
+				
+					$(".right").show();
+					$(".right1").hide();
+					
+				})
+				
+				$(".hid li").click(function(){
+					$(this).css("background","#2566C2");
+					$(this).siblings().css("background","#FFFFFF");
+					$(".hid2 li").css("background","#FFFFFF");
+					$(".hid1 li").css("background","#FFFFFF");
+				})
+					$(".hid1 li").click(function()
+					{
+						$(".right").css("display","block");					
+						$(".p1").html("大事件");
+						$(this).css("background","#2566C2");
+						$(".hid2 li").css("background","#FFFFFF");
+						$(".hid li").css("background","#FFFFFF");
+						$(".right1").hide();
+					})
+					$(".hid2 li").click(function()
+					{
+						$(".right").css("display","block");						
+						$(".p1").html("领导批示");
+						$(this).css("background","#2566C2");
+						$(".hid1 li").css("background","#FFFFFF");
+						$(".hid li").css("background","#FFFFFF");
+						$(".right1").hide();
+					})
+					$(".a10").click(function() {
+						$(".zhezhao").hide();
+						$(".wailian").css("display","none");
+					})
+					$(".btn1").click(function()
+					{
+						$(".zhezhao").show();
+						$(".wailian").css("display","block");
+						$(".wailian").css("backround","#1E2631");
+					})
+					$(".lffenju li").click(function() {
+						$(this).css("background", "#EDF4FF");
+						$(this).siblings().css("background", "#FFFFFF");
+					})
+					
+			})
+		</script>
+		<style>
+			.p1ul{
+			border-top: 1px solid #D1D3D8;
+			width: 940px;
+			padding-left: 20px;
+		}
+		.p1ul ul{
+			list-style:none;
+		}
+		.p1ul li{
+				   
+					line-height: 34px;
+					border-bottom:1px dashed #D1D3D8;		   
+					/* background: url(image/image/椭圆形%202.png) no-repeat 0px 14px; */
+					
+					padding-left: 16px;
+					
+				}
+		.p1ul li a{
+			
+			text-decoration: none;
+			font-size: 14px;
+			color: #333333;
+		}
+		.a5,.a6,.a7{
+				/* background: #3CD2F1 url(img/通知公告.png) no-repeat 24px 11px; */
+				width: 200px;
+				height: 31px;
+				padding-top: 9px;
+		}
+		.bt1{
+			width: 28px;
+			height: 28px;
+			margin-left: 448px;
+			margin-top:13.5px;
+		}
+		.p1{
+		font-size: 16px;
+		color: #333333;
+		padding-left: 20px;
+		
+		}
+		.times{
+			position: absolute;
+			margin-left: 862px;
+			margin-top: -26px;
+			font-family: MicrosoftYaHei;
+			font-size: 14px;
+			color: #999999;
+		}
+		.times:hover{
+		    color: #f00;
+		}
+		.hid
+		{
+			
+			display: none;
+		}
+		.hid li
+		{
+			padding-bottom: 10px;
+			padding-top: 10px;
+		}
+		.hid1
+		{
+			display: none;
+		}
+		.hid2
+		{
+			display: none;
+		}
+		li img
+		{
+			float: right;
+		}
+		.a1
+		{
+			background: url(img/主要职责1.png)no-repeat 24px 12px;
+		}
+		.a2
+		
+		{
+			background:url(img/内设机构.png)no-repeat 24px 12px;
+		}
+		.a3
+		{
+			background: url(img/领导批示1.png)no-repeat 24px 12px;
+		}
+		.a4
+		{
+			background: url(img/大事记.png)no-repeat 24px 12px;
+		}
+		.a5
+		{
+			background: url(img/领导批示.png)no-repeat 24px 12px;
+		}
+		.a7
+		{
+			background: url(img/通讯录.png)no-repeat 24px 12px;
+		}
+		.right1
+		{
+			width: 980px;
+			height: 546px;
+			background: #FFFFFF;
+			margin-left: 260px;
+			margin-top: 20px;
+		}
+		.bgtop
+		{
+			
+			margin-left: 20px;
+		}
+		.bgtop button
+		{
+			margin-bottom: 14px;
+			margin-top:20px;
+			width: 60px;
+			height: 28px;
+			border-radius: 3px;
+		}
+		.btn1
+		{
+			color: #FFFFFF;
+			background: #4B8DE3;
+			border: 1px solid #4B8DE3;
+		}
+		.btn2
+		{
+			color:#4B8DE3;
+			background: #FFFFFF;
+			border: 1px solid #4B8DE3;
+		}
+		.btn3
+		{
+			background: #FFFFFF;
+			border: 1px solid #D1D3D8;
+		}
+		.bgbottom  th a
+		{
+			color: #0099FF;
+			text-decoration: none;
+		}
+		.bgbottom table
+		{
+			width: 940px;
+			border-collapse: collapse;
+			font-size: 14px;
+			margin-left: 20px;
+			font-family: MicrosoftYaHei;
+            color: #333333;
+			
+		}
+		.bgbottom th
+		{
+
+			padding: 0px;
+			height: 32px;
+				
+		}
+		.wailian{
+			width: 640px;
+			height: 518px;
+			margin:-535px 320px 241px 320px ;
+			background: #FFFFFF;
+			border: 1px solid #E3E4E8;
+			box-shadow: 0 2px 12px 0 rgba(127,132,146,0.45);
+			border-radius: 6px;
+			display: none;
+			position: absolute;
+			z-index: 999;
+		}
+		.wailian>.p10{
+			border-bottom: 1px solid #999999;
+			padding: 0px 0px 10px 16px;
+			margin-bottom: 30px;
+			font-family: MicrosoftYaHei;
+			font-size: 14px;
+			color: #A9A9A9;
+			letter-spacing: 0;
+			line-height: 20px;
+		}
+		.wailian .a10{
+			text-decoration: none;
+			color: #A9A9A9;
+			margin-left: 518px;
+			
+		}
+		.wailian input[type="text"]{
+			width: 350px;
+			height: 26px;
+			background: #FFFFFF;
+			border: 1px solid #D1D3D8;
+			border-radius: 3px;
+			
+		}
+		.loandingcontent p{
+			text-align: right;
+			margin-right: 77px;
+			margin-bottom: 24px;
+		}
+		.bt10{
+			margin-left: 254px;
+			background-color: transparent;
+			border: none;
+			outline: none;
+			background: #FFFFFF;
+			border: 1px solid #D9D9D9;
+			border-radius: 3px;
+			width: 60px;
+			height: 32px;
+			font-family: MicrosoftYaHei;
+			font-size: 14px;
+			color: #333333;
+			letter-spacing: 0;
+			line-height: 20px;
+		}
+		.bt11{
+			margin-left: 14px;
+			background-color: #4B8DE3;
+			border: 1px solid #4B8DE3;
+			border: none;
+			border-radius: 3px;
+			width: 60px;
+			height: 32px;
+			font-family: MicrosoftYaHei;
+			font-size: 14px;
+			color: #ffffff;
+			letter-spacing: 0;
+			line-height: 20px;
+		}
+		p .sps,p .sp{
+			margin-right: 20px;
+		}
+		.fenju {
+			display: none;
+			width: 408px;
+			height: 556px;
+			background: #FFFFFF;
+			overflow: hidden;
+			border: 1px solid #E3E4E8;
+			box-shadow: 0 0 7px 0 rgba(0, 0, 0, 0.30);
+			border-radius: 6px;
+			position: absolute;
+			margin-left: 248px;
+			margin-top: 20px;
+		}
+		
+		.lffenju {
+			float: left;
+			margin-top: 22px;
+			margin-left: 20px;
+		}
+		
+		.lffenju li {
+			width: 100px;
+			height: 18px;
+			font-size: 12px;
+			list-style: none;
+			margin-top: 8px;
+		}
+		
+		.rhfenju {
+			height: 458px;
+			float: left;
+			margin-top: 22px;
+			overflow: hidden;
+			overflow-y: auto;
+		}
+		
+		.rhfenju li {
+			font-size: 12px;
+			list-style: none;
+			margin-top: 8px;
+		}
+		
+		.rhfenju li:hover {
+			background: #EDF4FF;
+		}
+		
+		#jiguan {
+			font-size: 14px;
+			width: 320px;
+			height: 28px;
+			margin-left: 20px;
+			margin-top: 16px;
+		}
+		.zhezhao
+		{
+			position: fixed;
+			top: 0;
+			right: 0;
+			left: 0;
+			bottom: 0;
+			background: #666666;
+			opacity: 0.3;
+			z-index: 2px;
+			display: none;
+		}
+    </style>
+	</head>
+	<body>
+		<div class="container">
+			<div class="header">
+				<span class="t1"></span>
+				<img src="img/5.png" alt="" class="img1"><a href="denglu.html">登录</a>
+			</div>
+			<div class="logo">
+				<h1>浙江省大企业税收服务和管理平台</h>
+					<div class="seach"><input type="text" value="请输入需要搜索的内容" class="text" /><input type="button" value="搜索" class="btn"></div>
+			</div>
+			<div class="nav">
+				<ul>
+					<li><a href="login.html">首页</a></li>
+					<li><a href="#">业务平台</a></li>
+					<li class="active"><a href="#">职能概况</a></li>
+					<li><a href="#">工作动态</a></li>
+					<li><a href="制度规范2.html">制度规范</a></li>
+					<li><a href="知识库2.html">知识库</a></li>
+					<li><a href="下载专区.html">下载专区</a></li>
+				</ul>
+			</div>
+			<div class="content">
+				<div class="aside">
+					<ul>
+						<li class="a1"><a href="#">主要职责</a></li>
+						<li class="a2"><a href="#">内设机构</a></li>
+						<li class="a3"><a href="#">人员岗事</a><img src="img/大于.png"></li>
+						<ul class="hid">
+							<li><a href="#">省局大企业管理局</a></li>
+							<li><a href="#">省局税费征收管理局</a></li>
+							<li><a href="#">省市局第一税局分局</a></li>
+							<li><a href="#">人员信息维护</a></li>
+						</ul>
+						<li class="a4"><a href="#">大事记</a><img src="img/大于.png"></li>
+						<ul class="hid1">
+							<li class="a6"><a href="#">2019</a></li>
+						</ul>
+						<li class="a5"><a href="#">领导批示</a><img src="img/大于.png"></li>
+
+						<ul class="hid2">
+							<li class="a6"><a href="#">2019</a></li>
+						</ul>
+						<li class="a7"><a href="#">通讯录</a></li>
+					</ul>
+				</div>
+				<div class="right">
+					<p class="p1">主要职责</p>
+					<div class="p1ul">
+						<ul>
+							<li><a href="#">财政部,税务总局联合发文进一步明确永续债的企业所得税税收信息发布..</a></li>
+							<span class="times">2019-03-04</span>
+							<li><a href="#">西城区税务,市场监管部门联合推出"e窗通企业一日准营套餐</a></li>
+							<span class="times">2019-02-28</span>
+							<li><a href="#">税法入童心 税收伴成长</a></li>
+							<span class="times">2019-02-06</span>
+							<li><a href="#">下沙区税务局个体工商户个税管理成效显著</a></li>
+							<span class="times">2019-01-28</span>
+							<li><a href="#">萧山区税务局开展"减税降费 纳税人有话说"税收宣传月专题讲座</a></li>
+							<span class="times">2019-01-17</span>
+							<li><a href="#">财政部,税务总局联合发文进一步明确永续债的企业所得税税收</a></li>
+							<span class="times">2019-03-04</span>
+							<li><a href="#">西城区税务,市场监管部门联合推出"e窗通企业一日准营套餐</a></li>
+							<span class="times">2019-02-28</span>
+							<li><a href="#">税法入童心 税收伴成长</a></li>
+							<span class="times">2019-02-06</span>
+							<li><a href="#">下沙区税务局个体工商户个税管理成效显著</a></li>
+							<span class="times">2019-01-28</span>
+							<li><a href="#">西城区税务,市场监管部门联合推出"e窗通企业一日准营套餐</a></li>
+							<span class="times">2019-02-28</span>
+							<li><a href="#">税法入童心 税收伴成长</a></li>
+							<span class="times">2019-02-06</span>
+							<li><a href="#">下沙区税务局个体工商户个税管理成效显著</a></li>
+							<span class="times">2019-01-28</span>
+						</ul>
+					</div>
+					<div class="inputs">
+					    <input type="button" value="<" class="input1"> 
+					    <input type="button" value="1" class="meikuang">
+					    <input type="button" value="2" class="input2">
+					    <input type="button" value="3" class="input3">
+					    <span class="span2"> · · · </span>
+					    <input type="text" value="10" class="input4"> 
+					    <input type="button" value=">" class="input5">
+					    <span class="span3">共10页</span>
+					    <span class="span4">到第</span>
+					    <input type="text" class="input6">
+					    <span class="span5">页</span>
+					    <input type="button" value="确定" class="input7">
+					</div>
+				</div>
+
+
+				<div class="right1" style="display: none;">
+					<div class="bgtop">
+						<button class="btn1">新增</button>
+						<button class="btn2">发布</button>
+						<button class="btn3">删除</button>
+					</div>
+					<div class="bgbottom">
+						<table border="">
+							<tr>
+								<th><input type="checkbox"></th>
+								<th>序号</th>
+								<th>姓名</th>
+								<th>机关</th>
+								<th>处室</th>
+								<th>状态</th>
+								<th>发布人</th>
+								<th>发布时间</th>
+								<th>操作</th>
+							</tr>
+							<tr>
+								<th><input type="checkbox"></th>
+								<th>1</th>
+								<th>阿强</th>
+								<th>税收机关</th>
+								<th>入实处</th>
+								<th>发布</th>
+								<th>张三</th>
+								<th>2019-02-16</th>
+								<th>
+									<a href="">修改</a>
+								</th>
+							</tr>
+							<tr>
+								<th><input type="checkbox"></th>
+								<th>1</th>
+								<th>阿强</th>
+								<th>税收机关</th>
+								<th>入实处</th>
+								<th>发布</th>
+								<th>张三</th>
+								<th>2019-02-16</th>
+								<th>
+									<a href="">修改</a>
+								</th>
+							</tr>
+							<tr>
+								<th><input type="checkbox"></th>
+								<th>1</th>
+								<th>阿强</th>
+								<th>税收机关</th>
+								<th>入实处</th>
+								<th>发布</th>
+								<th>张三</th>
+								<th>2019-02-16</th>
+								<th>
+									<a href="">修改</a>
+								</th>
+							</tr>
+							<tr>
+								<th><input type="checkbox"></th>
+								<th>1</th>
+								<th>阿强</th>
+								<th>税收机关</th>
+								<th>入实处</th>
+								<th>发布</th>
+								<th>张三</th>
+								<th>2019-02-16</th>
+								<th>
+									<a href="">修改</a>
+								</th>
+							</tr>
+							<tr>
+								<th><input type="checkbox"></th>
+								<th>1</th>
+								<th>阿强</th>
+								<th>税收机关</th>
+								<th>入实处</th>
+								<th>发布</th>
+								<th>张三</th>
+								<th>2019-02-16</th>
+								<th>
+									<a href="">修改</a>
+								</th>
+							</tr>
+							<tr>
+								<th><input type="checkbox"></th>
+								<th>1</th>
+								<th>阿强</th>
+								<th>税收机关</th>
+								<th>入实处</th>
+								<th>发布</th>
+								<th>张三</th>
+								<th>2019-02-16</th>
+								<th>
+									<a href="">修改</a>
+								</th>
+							</tr>
+							<tr>
+								<th><input type="checkbox"></th>
+								<th>1</th>
+								<th>阿强</th>
+								<th>税收机关</th>
+								<th>入实处</th>
+								<th>发布</th>
+								<th>张三</th>
+								<th>2019-02-16</th>
+								<th>
+									<a href="">修改</a>
+								</th>
+							</tr>
+							<tr>
+								<th><input type="checkbox"></th>
+								<th>1</th>
+								<th>阿强</th>
+								<th>税收机关</th>
+								<th>入实处</th>
+								<th>发布</th>
+								<th>张三</th>
+								<th>2019-02-16</th>
+								<th>
+									<a href="">修改</a>
+								</th>
+							</tr>
+							<tr>
+								<th><input type="checkbox"></th>
+								<th>1</th>
+								<th>阿强</th>
+								<th>税收机关</th>
+								<th>入实处</th>
+								<th>发布</th>
+								<th>张三</th>
+								<th>2019-02-16</th>
+								<th>
+									<a href="">修改</a>
+								</th>
+							</tr>
+							<tr>
+								<th><input type="checkbox"></th>
+								<th>1</th>
+								<th>阿强</th>
+								<th>税收机关</th>
+								<th>入实处</th>
+								<th>发布</th>
+								<th>张三</th>
+								<th>2019-02-16</th>
+								<th>
+									<a href="">修改</a>
+								</th>
+							</tr>
+							<tr>
+								<th><input type="checkbox"></th>
+								<th>1</th>
+								<th>阿强</th>
+								<th>税收机关</th>
+								<th>入实处</th>
+								<th>发布</th>
+								<th>张三</th>
+								<th>2019-02-16</th>
+								<th>
+									<a href="">修改</a>
+								</th>
+							</tr>
+							<tr>
+								<th><input type="checkbox"></th>
+								<th>1</th>
+								<th>阿强</th>
+								<th>税收机关</th>
+								<th>入实处</th>
+								<th>发布</th>
+								<th>张三</th>
+								<th>2019-02-16</th>
+								<th>
+									<a href="">修改</a>
+								</th>
+							</tr>
+							<tr></tr>
+						</table>
+					</div>
+					<div class="inputs">
+					    <input type="button" value="<" class="input1"> 
+					    <input type="button" value="1" class="meikuang">
+					    <input type="button" value="2" class="input2">
+					    <input type="button" value="3" class="input3">
+					    <span class="span2"> · · · </span>
+					    <input type="text" value="10" class="input4"> 
+					    <input type="button" value=">" class="input5">
+					    <span class="span3">共10页</span>
+					    <span class="span4">到第</span>
+					    <input type="text" class="input6">
+					    <span class="span5">页</span>
+					    <input type="button" value="确定" class="input7">
+					</div> 
+				</div>
+
+				<div class="wailian">
+					<p class="p10">基本信息 <a href="javascript:;" class="a10">关闭</a></p>
+					<div class="loandingcontent">
+						<p><span class="sp">姓名：</span><input type="text" /></p>
+
+						<p><span class="sps">所属部门：</span><input type="text" /></p>
+						<p><span class="sp"> 职务：</span><input type="text" /></p>
+						<p><span class="sps">固定电话：</span><input type="text" /></p>
+						<p><span class="sps">手机号码：</span><input type="text" /></p>
+						<p><span class="sps">发布日期：</span><input type="text" value=" 2019-9-24" /></p>
+						<button type="button" class="bt10">保存</button>
+						<button type="button" class="bt11">发布</button>
+					</div>
+				</div>
+				<div class="fenju">
+					<input id="jiguan" type="text" placeholder="请输入税务机关"><br>
+					<div class="lffenju">
+						<ul>
+							<li>杭州</li>
+							<li>温州</li>
+							<li>绍兴</li>
+							<li>湖州</li>
+							<li>嘉兴</li>
+							<li>金华</li>
+							<li>建州</li>
+							<li>台州</li>
+							<li>丽水</li>
+							<li>舟山</li>
+						</ul>
+					</div>
+					<div class="rhfenju">
+						<ul>
+							<li>杭州税局</li>
+							<li>杭州市高新地税局</li>
+							<li>杭州市地税局开发区税务分局</li>
+							<li>杭州市地方税务局拱墅税务分局</li>
+							<li>杭州市萧山区地税局</li>
+							<li>杭州市余杭地税局</li>
+							<li>杭州市地税局</li>
+							<li>杭州市地税局开发区分局</li>
+							<li>杭州税局</li>
+							<li>杭州市高新地税局</li>
+							<li>杭州市地税局开发区税务分局</li>
+							<li>杭州市地方税务局拱墅税务分局</li>
+							<li>杭州市萧山区地税局</li>
+							<li>杭州市余杭地税局</li>
+							<li>杭州市地税局</li>
+							<li>杭州市地税局开发区分局</li>
+							<li>杭州税局</li>
+							<li>杭州市高新地税局</li>
+							<li>杭州市地税局开发区税务分局</li>
+							<li>杭州市地方税务局拱墅税务分局</li>
+							<li>杭州市萧山区地税局</li>
+							<li>杭州市余杭地税局</li>
+							<li>杭州市地税局</li>
+							<li>杭州市地税局开发区分局</li>
+						</ul>
+					</div>
+				</div>
+				<!-- <div class="inputs">
+    			                    <input type="button" value="<" class="input1"> 
+    			                    <span class="span1">1</span>
+    			                    <input type="text" value="2" class="input2">
+    			                    <input type="text" value="3" class="input3">
+    			                    <span class="span2"> . . . </span>
+    			                    <input type="text" value="10" class="input4"> 
+    			                    <input type="button" value=">" class="input5">
+    			                    <span class="span3">共十页</span>
+    			                    <span class="span4">到第</span>
+    			                    <input type="text" class="input6">
+    			                    <span class="span5">页</span>
+    			                    <input type="button" value="确定" class="input7">
+    			                </div> -->
+
+			</div>
+			<div class="bottom">
+				友情链接：<a href="">国家税务总局</a><a href="">总局大企业税收服务和管理工作平台</a><a href="">浙江省税务局内网</a><a href="">金税三期决策支持系统</a>
+			</div>
+			<div class="zhezhao">
+				
+			</div>
+
+			<div class="footer">
+				<div class="p8">
+					<div class="image"><img src="img/dzxg.png" alt=""></div>
+					<p class="p7"><a href="#">法律声明</a>&nbsp;<span class="shu">|</span>&nbsp;<a href="#">网站管理</a>&nbsp;<span class="shu">|</span>&nbsp;<a
+						 href="#">网站帮助</a>&nbsp;<span class="shu">|</span>&nbsp;<a href="#">关于我们</a>&nbsp;<span class="shu">|</span>&nbsp;<a
+						 href="#">网站纠错</a>&nbsp;</p>
+					<p class="p9">国家税务总局浙江省税务局版权所有 京ICP备1234568号-2 联系电话：0142-123456</p>
+					<p class="p9">浙公网安备 33010250025645号 网站标识码：bm236554412 地址：杭州市滨江区</p>
+					<p class="p9">国家税务总局浙江省税务局办公室主办</p>
+				</div>
+			</div>
+
+		</div>
+	</body>
+	<script>
+		var a3 = document.querySelector(".a3");
+		var a4 = document.querySelector(".a4");
+		var a5 = document.querySelector(".a5");
+		var a7 = document.querySelector(".a7");
+		var flag = true;
+		var flag1 = true;
+		var flag2 = true;
+		a3.onclick = function() {
+			if (flag) {
+				a3.lastChild.src = "img/小于.png";
+				a4.style.marginTop = "160px";
+				flag = false;
+			} else {
+				a3.lastChild.src = "img/大于.png";
+				a4.style.marginTop = "0px";
+				flag = true;
+			}
+		}
+		a4.onclick = function() {
+			if (flag1) {
+				a4.lastChild.src = "img/小于.png";
+				a5.style.marginTop = "40px";
+				flag1 = false;
+			} else {
+				a4.lastChild.src = "img/大于.png";
+				a5.style.marginTop = "0px";
+				flag1 = true;
+			}
+		}
+		a5.onclick = function() {
+			if (flag2) {
+				a5.lastChild.src = "img/小于.png";
+				a7.style.marginTop = "40px";
+				flag2 = false;
+			} else {
+				a5.lastChild.src = "img/大于.png";
+				a7.style.marginTop = "0px";
+				flag2 = true;
+			}
+		}
+	</script>
+
+	<!-- <script type="text/javascript">
+    		var t1=document.querySelector(".t1");
+    		var date=new Date();
+    		var year=date.getFullYear();
+    		var month = date.getMonth()+1;
+    		var dates=date.getDate();
+    		var arr=['星期日','星期一','星期二','星期三','星期四','星期五','星期六'];
+    		var day=date.getDay();
+    		t1.innerHTML=year+'年'+month+'月'+dates+'日 '+arr[day];
+    	</script> -->
+	<script type="text/javascript">
+		$(".zxf_pagediv").createPage({
+			pageNum: 10,
+			current: 1,
+			backfun: function(e) {
+				//console.log(e);//回调
+			}
+		});
+		time();
+	</script>
+	</body>
+</html>
