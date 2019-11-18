@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<!-- <link rel="stylesheet" type="text/css" href="css/wangji.css"/> -->
+		<style type="text/css">
+			*{
+							margin: 0px;
+							padding: 0px;
+						}
+						.content{
+							width: 1280px;
+							height: 768px;
+							margin: 0px auto;
+							background-color: #2566C2;
+						}
+						h1{
+							color: #ffffff;
+						}
+						header{
+							padding: 40px 0px 0px 159px;
+							background: url(img/清晰%202.png) no-repeat 85px 26px;
+							
+						}
+						footer{
+							
+							width: 422px;
+							height: 308px;
+							background: #FFFFFF;
+							border-radius: 6px;
+							margin-left: 429px;
+							margin-top: 150px;
+						}
+						footer .there{
+							text-align: center;
+							font-family: MicrosoftYaHei;
+							font-size: 32px;
+							color: #333333;
+							padding-top: 26px;
+						}
+						.one,.two{
+							border: 1px solid #666666;
+							width: 330px;
+							height: 40px;
+							border-radius: 4px;
+						}
+						/* .four{
+							border: 1px solid #666666;
+							width: 330px;
+							height: 40px;
+							border-radius: 4px;
+							margin-bottom: 20px;
+							margin-left: 46px;
+						} */
+						.one{
+							margin: 30px 0px 20px 46px;
+						}
+						.two{
+						margin-bottom: 20px;
+						margin-left: 46px;
+						}
+						footer input{
+							margin: 10px 0px 0px 16px;
+							border: none;
+							outline: none;
+						}
+						#btn{
+							width: 330px;
+							height: 40px;
+							background: transparent;
+							border: none;
+							border: 1px solid #4B8DE3;
+							border-radius: 4px;
+							font-family: MicrosoftYaHei;
+							font-size: 16px;
+							color: #FFFFFF;
+							background: #4B8DE3;
+							margin-left: 46px;
+						}
+						.loding{
+							position: fixed;
+							top: 0;
+							bottom: 0;
+							left: 0;
+							right: 0;
+							opacity: 0.3;
+							background: #ffffff;
+							display: none;
+						}
+						.logine{
+							position: fixed;
+							top: 0;
+							bottom: 0;
+							left: 0;
+							right: 0;
+							background-color: #ffffff;
+							z-index: 1;
+							display: none;
+						}
+						#tipes{
+							font-size: 24px;
+							position: absolute;
+							z-index: 99;
+							top:20%;
+							left: 50%;
+							margin-left: -143px;
+							color: red;
+							display:none;
+						}
+						.banne{
+							position: absolute;
+							top: 25%;
+							left: 50%;
+							margin-left: -175px;
+							z-index: 88;
+							display: none;
+						}
+		</style>
+		<script src="../js/jquery-1.11.0.min.js" type="text/javascript" charset="utf-8"></script>
+		<script type="text/javascript">
+			$(function() {
+				$("#btn").click(function() {
+					if($("#userName").val() == "" || $("#pwd").val() == "" ) {
+						alert("用户名或密码不能为空");
+						return false;
+					} 
+					if($("#userName").val().length <= 2) {
+						alert("用户名不能少于3个字符");
+						return false;
+					}
+					
+					$.ajax({
+						url:"updata.php",
+						type:"POST",
+						data:{userName:$("#userName").val(),pwd:$("#pwd").val()},
+						dataType:"json",
+						success:function(data) {
+							if(data.status == '1001') {
+								$('.banne').show();
+								$('#tipes').show();
+								$('.logine').show();
+								var timer = 6;
+								var sprot;
+								function keep() {
+									sprot = setInterval(function() {
+										if(timer == 1) {
+											location.href = "denglu.html";
+										}
+										timer--;
+										$('#tipes').html("注册成功还有"+timer+"后跳转登陆页面");
+									},1000);
+								}
+								keep();
+								
+							}
+						}
+					})
+				});
+				$("#userName").focus(function() {
+					$(this).val("");
+				})
+			})
+		</script>
+	</head>
+	<body>
+		<div class="content">
+			<header >
+				<h1>浙江税务局大企业税收服务和管理信息平台</h1>
+			</header>
+			<footer>
+				<p class="there">重置密码</p>
+				<p class="one"><input type="text" name="" id="userName" placeholder="输入用户名" autocomplete="off" /></p>
+				
+				<p class="two"><input type="password" name="" id="pwd" placeholder="输入密码"  /></p>
+				<!-- <p class="four"><input type="password" name="" id="pwd2" placeholder="确认密码"  /></p> -->
+				<input type="button" name="" id="btn" value="提交" />
+			</footer>
+			<div class="loding">
+				
+			</div>
+		</div>
+		<div class="banne">
+			<input type="image" src="../163/img/100.jpg" />
+		</div>
+		<div id="tipes">
+			
+		</div>
+		<div class="logine">
+			</div>
+	</body>
+</html>

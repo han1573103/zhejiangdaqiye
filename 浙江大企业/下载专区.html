@@ -1,0 +1,579 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>下载专区</title>
+	<script src="time.js" type="text/javascript" charset="utf-8"></script>
+	
+    <style>
+		body,ul,li{
+			margin:0px;
+			padding:0px;
+		}
+		.container{
+			width: 1280px;
+			margin: 0px auto;
+		}
+		.header{
+			background: #F0F2F5;
+			
+			padding: 9px 50px 6px 979px;
+			text-align: left;
+			
+		}
+		.header a{
+			margin-left:27px;
+			text-decoration: none;
+		}
+		.img1{
+			position: absolute;
+			width: 22px;
+			height: 22px;
+			padding-top:1px;
+			margin-left: 5px;
+		}
+		.logo{
+			height: 120px;
+			background: #f4f6f9 url(img/1.png) no-repeat 84px 21px;
+			
+			
+		}
+		.logo>h1{
+			position: absolute;
+			margin-left: 160px;
+			margin-top:35px;
+			font-family: MicrosoftYaHei-Bold;
+			font-size: 38px;
+			color: #2566C2;
+		}
+		
+		.seach{
+			position: relative;
+			height: 28px;
+			width: 260px;
+			margin-left: 790px;
+			margin-top: -60px;
+		}
+		.text{
+			width: 187px;
+			height: 22px;
+			font-family: MicrosoftYaHei;
+			font-size: 14px;
+			color: #999999;
+			line-height: 20px;
+		}
+		.btn{
+			width: 60px;
+			height: 28px;
+			background: #4B8DE3;
+			border: 1px solid #4B8DE3;
+			border-radius: 0px 3px 3px 0px;
+			font-family: MicrosoftYaHei;
+			font-size: 14px;
+			color: #FFFFFF;
+			/* line-height: 20px; */
+		}
+		.nav{
+				width: 1280px;
+				height: 52px;
+				background: #2566C2;
+			}
+			.nav ul{
+				list-style: none;
+				padding-left: 50px;
+			}
+			.nav ul li{
+				float: left;
+				width: 164px;
+				text-align: center;
+			}
+			.nav a{
+				height: 52px;
+				font-size: 20px;
+				font-family: MicrosoftYaHei;
+				
+				color: #FFFFFF;
+				text-decoration: none;
+				display:block;
+				padding-top: 13px;
+				/* padding-left:78px; */
+			}
+			.active a{
+				background: #fff;
+				color: #2566C2;
+			}
+			.t2{
+				width: 120px;
+				height: 28px;
+				background: #FFFFFF;
+				border: 1px solid #E3E4E8;
+				border-radius: 3px;
+			}
+			.t3,.t4{
+				width: 142px;
+				height: 28px;
+				background: #FFFFFF;
+				border: 1px solid #4B8DE3;
+				border-radius: 3px;
+			}
+			.bt2{
+				width: 60px;
+				height: 28px;
+				background: #4B8DE3;
+				border: 1px solid #4B8DE3;
+				border-radius: 3px;
+			}
+			.r1{
+				width: 60px;
+				height: 28px;
+				background: #FFFFFF;
+				border: 1px solid #4B8DE3;
+				border-radius: 3px;
+			}
+			.hh{
+				margin-left: 20px;
+			}
+			.content{
+				position: absolute;
+				margin-top: 0px;
+				width: 1280px;
+				height: 496px;
+				background: #F4F6F9;
+				
+			}
+			
+			.aside{
+			   float: left;
+			   width: 200px;
+			   height: 476px;
+			   background: #FFF;
+			   margin-top: 20px;
+			   margin-left: 40px;
+			}
+			.aside ul{
+				list-style: none;
+				float: left;
+				
+			}
+			
+			.aside li a{
+				
+				text-decoration: none;
+				margin-left: 44px;
+				padding-top: 9px;
+			}
+			.a1{
+				/* background:#D8E4F4 url(img/制度规范.png)no-repeat 24px 12px; */
+				padding-top: 9px;
+				
+				width: 200px;
+				height: 31px;
+			}
+			.a2,.a3,.a4{
+				/* background: #3CD2F1 url(img/通知公告.png) no-repeat 24px 11px; */
+				width: 200px;
+				height: 31px;
+				padding-top: 9px;
+				
+			}
+			
+			
+			.right{
+				margin-left: 20px;
+				margin-top: 20px;
+				width: 980px;
+				height: 476px;
+				float:left;
+				background: #fff;
+			}
+			.right-top{
+				margin-top: 20px;
+				margin-left: 20px;
+				font-family: MicrosoftYaHei;
+				font-size: 16px;
+				color: #333333;
+			}
+			.p1ul{
+				border-top: 1px solid #D1D3D8;
+				width: 940px;
+				padding-left: 20px;
+			}
+			.p1ul ul{
+				list-style:none;
+			}
+			.p1ul ul li{
+					   
+						line-height: 34px;
+						border-bottom:1px dashed #D1D3D8;
+					   
+						background: url(img/椭圆形2.png)  no-repeat 0px 14px;
+						padding-left: 16px;
+						list-style: none;
+					}
+			.p1ul li a{
+				text-decoration: none;
+				font-size: 14px;
+				color: #333333;
+			}
+			.inputs{
+				
+				margin-left: 468px;
+				margin-top: 13px;
+			}
+			.input1{
+				width: 28px;
+				height: 28px;
+				background: #F4F6F9;
+				border: 1px solid #E3E4E8;
+				border-radius: 3px;
+			}
+			.meikuang,.input2,.input3,.input5{
+				width: 28px;
+				height: 28px;
+				border: 1px solid #D1D3D8;
+				border-radius: 3px;
+			}
+			.input4{
+				width: 34px;
+				height: 28px;
+				border: 1px solid #D1D3D8;
+				border-radius: 3px;
+				text-align: center;
+			}
+			.input5{
+				width: 28px;
+				height: 28px;
+				border: 1px solid #D1D3D8;
+				border-radius: 3px;
+			}
+			.input6{
+				width: 40px;
+				height: 28px;
+				border: 1px solid #D1D3D8;
+				border-radius: 3px;
+			}
+			.input7{
+				width: 63px;
+				height: 28px;
+				border: 1px solid #D1D3D8;
+				border-radius: 3px;
+			}
+			.meikuang{
+				background: #FFFFFF;
+				border: none;
+			}
+			.span2{
+				padding-left: 10px;
+				padding-right: 10px;
+				color: #CCCCCC;
+			}
+			.span3{
+				font-family: PingFangSC-Regular;
+				font-size: 14px;
+				color: #333333;
+				text-align: center;
+				padding-left: 10px;
+				padding-right: 10px;
+			}
+			.span4,.span5{
+				font-family: PingFangSC-Regular;
+				font-size: 14px;
+				color: #333333;
+				text-align: center;
+				padding-left: 3px;
+				padding-right: 3px;
+			}
+			.bt1{
+				
+				width: 28px;
+				height: 28px;
+				margin-left: 448px;
+				margin-top:13.5px;
+			}
+			
+			.bottom{
+				/* margin-top:476px; */
+				margin-top: 496px;
+				width: 1224px;
+				height: 42px;
+				background: #F4F6F9;
+				padding-left:56px;
+				padding-top: 20px;
+				
+			}
+			.bottom a{
+				text-decoration: none;
+				margin-left:30px;
+				font-family: MicrosoftYaHei;
+				font-size: 16px;
+				color: #4B8DE3;
+			}
+			
+			/* .footer{
+				margin-top:0px;
+				background:#999999;
+				height: 120px;
+				border-top: 2px solid #2566C2;
+			} */
+			.footer{
+				border-top: 2px solid #09f;
+					width: 1280px;
+				 height: 164px;
+				 background: #F0F2F5;
+				 margin-bottom: 24px;
+			}
+			.p7{
+				padding-top: 20px;
+			}
+			.p7 a{
+				   margin-left: 10px;
+				   margin-right: 10px;
+				  text-decoration: none;
+				   font-size: 12px;
+				   color: #4B8DE3;
+			}
+			.p7 a:hover{
+				   color: #f00;
+			}
+			.shu{
+				font-family: MicrosoftYaHei;
+				font-size: 12px;
+				color: #000000;
+				line-height: 16px;
+				}
+			.p8{	
+				/* position: relative; */
+				height: 120px;
+				/* padding-top: 20px; */
+					margin-top: -15px;
+					   width: 1200px;
+					   height: 120px;
+					   margin-left: 40px;
+					   text-align: center;
+					   background: #fff;
+				}
+			.image{
+				position: absolute;
+				margin-left: 294px;
+				margin-top: 29px;
+			}
+			.p9{
+				   font-family: MicrosoftYaHei;
+				   font-size: 12px;
+				   color: #666666;
+				   line-height: 8px;
+			}
+		.link{
+		    
+		    height: 48px;
+		    position: relative;
+		    margin-top: 0px;
+		    padding-top: 22px;
+		    /* top: 22px; */
+		    padding-left: 64px;
+		    background: #FFFFFF;
+		}
+		.link span{
+		    font-size: 14px;
+		    color: #333333;
+		    /* margin-left: 64px; */
+		}
+		
+		
+		.p1ul{
+			border-top: 1px solid #D1D3D8;
+			width: 940px;
+			padding-left: 20px;
+		}
+		.p1ul ul{
+			list-style:none;
+		}
+		.p1ul li{
+				   
+					line-height: 34px;
+					border-bottom:1px dashed #D1D3D8;
+				   
+					background: url(img/椭圆形%202.png)  no-repeat 0px 14px;
+					padding-left: 16px;
+					list-style: none;
+				}
+		.p1ul li a{
+			text-decoration: none;
+			font-size: 14px;
+			color: #333333;
+		}
+		.a5,.a6{
+			/* background: #3CD2F1 url(img/通知公告.png) no-repeat 24px 11px; */
+			width: 200px;
+			height: 31px;
+			padding-top: 9px;
+			
+		}
+		.bt1{
+			
+			width: 28px;
+			height: 28px;
+			margin-left: 448px;
+			margin-top:13.5px;
+		}
+		.p1{
+		font-size: 16px;
+		color: #333333;
+		padding-left: 20px;
+		
+		}
+		.times{
+			position: absolute;
+			margin-left: 862px;
+			margin-top: -26px;
+			font-family: MicrosoftYaHei;
+			font-size: 14px;
+			color: #999999;
+		}
+		.times:hover{
+		    color: #f00;
+		}
+   /* .banner h1{
+background: url(img/1.png)no-repeat 84px 21px;
+     }
+    .a1{
+    background: url(img/主要职责1.png)no-repeat 24px 12px;
+}
+.a2{
+    background: url(img/内设机构.png)no-repeat 24px 12px;
+}
+.a3{
+    background: url(img/人员岗责.png)no-repeat 24px 12px;
+}
+.a4{
+    background:url(img/大事记.png)no-repeat 24px 12px;
+}
+.a5{
+    background:#D8E4F4 url(img/2019.png)no-repeat 24px 15px;
+    border-left: 3px solid #2566C2;
+}
+.a6{
+    background: url(img/领导批示.png)no-repeat 24px 12px;
+}
+.a7{
+    background: url(img/通讯录.png)no-repeat 24px 12px;
+}
+.p1ul li{
+    background: url(img/椭圆形2.png) no-repeat 0px 7px;
+} */
+    </style>
+</head>
+<body>
+    <div class="container">
+    			<div class="header">
+    			<span class="t1"></span>
+    			<img src="img/5.png" alt="" class="img1"><a href="denglu.html">登录</a>
+    			</div>
+    			<div class="logo">
+    				<h1>浙江省大企业税收服务和管理平台</h>
+    				<div class="seach"><input type="text" value="请输入需要搜索的内容" class="text"/><input type="button" value="搜索" class="btn"></div>
+    			</div>
+    			<div class="nav">
+    				<ul>
+    					<li><a href="login.html">首页</a></li>
+    					<li><a href="#">业务平台</a></li>
+    					<li><a href="大事件2.html">职能概况</a></li>
+    					<li><a href="#">工作动态</a></li>
+    					<li><a href="制度规范2.html">制度规范</a></li>
+    					<li><a href="知识库2.html">知识库</a></li>
+    					<li  class="active"><a href="下载专区.html">下载专区</a></li>
+    				</ul>
+    			</div>
+				<div class="link">
+				    <span>&nbsp;资料名称 : &nbsp;<input type="text" class="t2">&nbsp;资料类型 ：&nbsp;<input type="text" class="t2">&nbsp;上传作者 ：&nbsp;<input type="text" class="t2">&nbsp;上传日期 ：&nbsp;<input type="text" value=" 2019.04.12" class="t3">&nbsp;--&nbsp;<input type="text" value=" 选择日期" class="t4"></span>
+				        
+				    <h class="hh"><input type="button" class="bt2" id="bt2" value="搜索">
+				        <input type="reset" class="r1" value="重置"></h>
+				</div>
+				<div class="content">
+				<div class="aside">
+            <ul>
+                <li class="a1"><a href="#">培训资料</a></li>
+                <li class="a2"><a href="#">软件工具</a></li>
+                <li class="a3"><a href="#">其他资料</a></li>
+                
+            </ul>
+        </div>
+           <div class="right">
+                <p class="p1">主要职责</p>
+                <div class="p1ul">
+                    <ul>
+                        <li><a href="#">财政部,税务总局联合发文进一步明确永续债的企业所得税税收信息发布..</a></li>
+                        <span class="times">2019-03-04</span>
+                        <li><a href="#">西城区税务,市场监管部门联合推出"e窗通企业一日准营套餐</a></li>
+                        <span class="times">2019-02-28</span>
+                        <li><a href="#">税法入童心  税收伴成长</a></li>
+                        <span class="times">2019-02-06</span>
+                        <li><a href="#">下沙区税务局个体工商户个税管理成效显著</a></li>
+                        <span class="times">2019-01-28</span>
+                        <li><a href="#">萧山区税务局开展"减税降费 纳税人有话说"税收宣传月专题讲座</a></li>
+                        <span class="times">2019-01-17</span>
+                        <li><a href="#">财政部,税务总局联合发文进一步明确永续债的企业所得税税收</a></li>
+                        <span class="times">2019-03-04</span>
+                        <li><a href="#">西城区税务,市场监管部门联合推出"e窗通企业一日准营套餐</a></li>
+                        <span class="times">2019-02-28</span>
+                        <li><a href="#">税法入童心  税收伴成长</a></li>
+                        <span class="times">2019-02-06</span>
+                        <li><a href="#">下沙区税务局个体工商户个税管理成效显著</a></li>
+                        <span class="times">2019-01-28</span>
+                        <li><a href="#">西城区税务,市场监管部门联合推出"e窗通企业一日准营套餐</a></li>
+                        <span class="times">2019-02-28</span>
+                        
+                    </ul>
+                       </div>
+					  
+                      <div class="inputs">
+                         <input type="button" value="<" class="input1"> 
+                         <input type="button" value="1" class="meikuang">
+                         <input type="button" value="2" class="input2">
+                         <input type="button" value="3" class="input3">
+                         <span class="span2"> · · · </span>
+                         <input type="text" value="10" class="input4"> 
+                         <input type="button" value=">" class="input5">
+                         <span class="span3">共10页</span>
+                         <span class="span4">到第</span>
+                         <input type="text" class="input6">
+                         <span class="span5">页</span>
+                         <input type="button" value="确定" class="input7">
+                     </div> 
+            </div>
+       </div>
+       
+    			<div class="bottom">
+    				友情链接：<a href="">国家税务总局</a><a href="">总局大企业税收服务和管理工作平台</a><a href="">浙江省税务局内网</a><a href="">金税三期决策支持系统</a>
+    			</div>
+    			
+    			<div class="footer">
+    				<div class="p8">
+    						<div class="image"><img src="img/dzxg.png" alt=""></div>
+    						 <p class="p7"><a href="#">法律声明</a>&nbsp;<span class="shu">|</span>&nbsp;<a href="#">网站管理</a>&nbsp;<span class="shu">|</span>&nbsp;<a href="#">网站帮助</a>&nbsp;<span class="shu">|</span>&nbsp;<a href="#">关于我们</a>&nbsp;<span class="shu">|</span>&nbsp;<a href="#">网站纠错</a>&nbsp;</p>
+    						 <p class="p9">国家税务总局浙江省税务局版权所有 京ICP备1234568号-2 联系电话：0142-123456</p>
+    						 <p class="p9">浙公网安备 33010250025645号 网站标识码：bm236554412 地址：杭州市滨江区</p>
+    						 <p class="p9">国家税务总局浙江省税务局办公室主办</p>
+    				 </div>
+    		</div>
+    
+    		</div>
+    	</body>
+    	<!-- <script type="text/javascript">
+    		var t1=document.querySelector(".t1");
+    		var date=new Date();
+    		var year=date.getFullYear();
+    		var month = date.getMonth()+1;
+    		var dates=date.getDate();
+    		var arr=['星期日','星期一','星期二','星期三','星期四','星期五','星期六'];
+    		var day=date.getDay();
+    		t1.innerHTML=year+'年'+month+'月'+dates+'日 '+arr[day];
+    	</script> -->
+    	<script type="text/javascript">
+    		time();
+    	</script>
+</body>
+</html> 
